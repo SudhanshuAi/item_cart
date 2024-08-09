@@ -1,0 +1,290 @@
+.container{
+  display: flex;
+  flex-direction: row;
+  padding-right: 40px;
+  gap: 10%;
+  background-color: hsl(20, 50%, 98%);
+}
+
+.menu {
+  text-align:left; /* Center align content */
+  width: 400%;
+}
+
+.menu h1{
+  padding-left: 60px;
+}
+
+.menu-items {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center; 
+}
+
+.row {
+  display: flex;
+  justify-content: space-around; /* Space items evenly in row */
+  width: 100%;
+  margin-bottom: 20px; /* Margin between rows */
+  gap: 1%;
+}
+
+.item {
+  width: 25%; 
+  padding: 10px;
+  text-align: center;
+}
+
+.image-item{
+  width: 90%;
+  height: 70%;
+  border-radius: 10px;
+}
+
+.item-name {
+  font-weight: bold;
+}
+
+.item-price {
+  margin-top: 5px;
+  font-size: 0.9em;
+}
+
+.maincart{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 40px;
+  margin-right: 40px;
+  background-color: white;
+  width: 200%;
+  border-radius: 7px;
+  transition: height 0.3s ease;
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: 300px;
+}
+
+.maincart h2{
+  color: hsl(14, 86%, 42%);
+  padding-left: 20px;
+  font-size: 30px;
+}
+
+.maincart button{
+  width: 90%;
+  margin-left: 15px;
+  margin-right: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.cart svg{
+  padding-left: 200px;
+  
+}
+
+.cart p{
+  font-size: 12px;
+  text-align: center;
+  padding-left: 170px;
+  color: hsl(14, 74%, 26%);
+}
+
+.confirm-order{
+  position: sticky;
+  width: 90%;
+  margin-left: 15px;
+  margin-right: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+
+button {
+  margin-top: 10px;
+  background-color: #464a4e;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #182533;
+}
+
+
+.cart-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.cart-controls button {
+  font-size: 18px;
+  padding: 5px 10px;
+  border: none;
+  background-color: hsl(14, 86%, 42%);
+  color: white;
+  cursor: pointer;
+}
+
+.cart-controls button:hover {
+  background-color: hsl(14, 86%, 42%);
+}
+
+.cart-controls span {
+  font-size: 18px;
+  margin: 0 10px;
+}
+
+
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.popup-content {
+  background-color: white;
+  width: 25%;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.popup-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.popup-content ul li {
+  margin-bottom: 8px;
+}
+
+.popup-content button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+
+
+/* for mobile screen */
+
+
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column; 
+  }
+
+  .menu {
+    text-align: center; 
+    width: 100%; 
+  }
+
+  .menu-items {
+    flex-direction: column; 
+  }
+
+  .row {
+    flex-direction: column; 
+    gap: 10px; 
+  }
+
+  .item {
+    width: 100%; 
+    padding: 10px;
+    text-align: center;
+  }
+
+  .image-item {
+    width: 100%; 
+    height: auto; 
+  }
+
+  .maincart {
+    width: 100%; 
+    margin: 20px;
+    align-items: center; 
+  }
+
+  .maincart h2 {
+    font-size: 24px; 
+  }
+
+  .cart svg {
+    padding-left: 0; 
+  }
+
+  .cart p {
+    font-size: 12px;
+    text-align: center;
+    padding-left: 0; 
+  }
+
+  .confirm-order {
+    position: relative; 
+    width: 90%;
+    margin: 10px;
+  }
+
+  .cart-controls {
+    flex-direction: column; 
+    align-items: center;
+  }
+
+  .cart-controls button {
+    font-size: 16px;
+  }
+
+  .cart-controls span {
+    font-size: 16px; 
+    margin: 5px 0; 
+  }
+
+  .popup-content {
+    width: 90%; 
+    max-width: 400px; 
+  }
+}
+
+/* for mini screen */
+
+@media (max-width: 600px) {
+  .maincart {
+    margin: 10px; 
+  }
+
+  .maincart h2 {
+    font-size: 20px; 
+  }
+
+  .cart-controls button {
+    font-size: 14px; 
+  }
+
+  .cart-controls span {
+    font-size: 14px; 
+  }
+
+  .popup-content {
+    width: 95%; 
+    padding: 10px; 
+  }
+}
